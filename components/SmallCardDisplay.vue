@@ -4,11 +4,13 @@
       {{ cardsSection.title }}
     </h4>
     <div class="cards-container">
-      <SmallCard
-        v-for="card in cardsSection.cards"
-        :key="card.id"
-        :card="card"
-      />
+      <b-row>
+        <SmallCard
+          v-for="card in cardsSection.cards"
+          :key="card.id"
+          :card="card"
+        />
+      </b-row>
     </div>
   </div>
 </template>
@@ -29,7 +31,7 @@ export default {
     margin-bottom: 2rem;
   }
   .card-container {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     flex-wrap: wrap;
   }
