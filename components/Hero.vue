@@ -6,7 +6,7 @@
         Find your Fire Extinguisher
       </h1>
       <p class="snippet">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto illum quidem asperiores, cum nisi aperiam eius ipsa sapiente odit!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto illum quidem asperiores, cum nisi aperiam eius ipsa sapiente odit! {{ data1 }} and {{ data3 }}
       </p>
       <button class="button btn">
         Start Looking
@@ -17,16 +17,23 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
+  computed: {
+    ...mapState([
+      'data1',
+      'data3'
+    ])
+  }
 }
 </script>
 
 <style scoped>
     .Hero {
-        height: 50vh;
-        position: relative;
+        /* height: 50vh; */
+        /* position: relative; */
         display: flex;
-        padding: 5rem 0;
+        padding: 3rem 0;
         align-items: flex-start;
         justify-content: space-between;
     }

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Hero />
     <LargeCardDisplay
       v-for="cardSections in largeCardSections"
       :key="cardSections.id"
