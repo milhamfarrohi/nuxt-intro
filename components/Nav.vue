@@ -27,6 +27,11 @@
             My Items <span class="sr-only">(current)</span>
           </NuxtLink>
         </li>
+        <li class="nav-item active">
+          <NuxtLink to="/vuetify" class="nav-link">
+            Vuetify Example
+          </NuxtLink>
+        </li>
       </ul>
     </div>
   </nav>

@@ -31,7 +31,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -50,7 +51,13 @@ export default {
     }
   },
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3001'
+  },
+
   server: {
     port: 3001 // default: 3000
-  }
+  },
+
+  ssr: false // default: true
 }
